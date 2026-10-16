@@ -14,7 +14,7 @@ namespace Calculator
             "s - Subtract",
             "m - Multiply",
             "d - Divide",
-            "sabs - Substract Abs"
+            "sabs - Substract Abs",
             "dr - Divide Remainder"
              };
 
