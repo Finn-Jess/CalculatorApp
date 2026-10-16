@@ -66,6 +66,14 @@
                         case "sabs":
                             OptionsManager.SubstractAbs(a,b);
                             break;
+                        case "dr":
+                            OptionsManager.DivideRemainder(a, b);
+                            break;
+                        case "ex":
+                            Console.Clear();
+                            Console.WriteLine("Goodbye");
+                            Console.ReadKey(true);
+                            return;
                     }
 
                 }
