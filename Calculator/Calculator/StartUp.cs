@@ -2,10 +2,29 @@
 {
     internal class StartUp
     {
+        private static bool CheckCredentials()
+        {
+            Console.WriteLine("Enter password to gain access: ");
+            string password = Console.ReadLine();
+            Console.Clear();
+            return password == Password;
+        }
+
+        private const string Password = "abcd1234";
+
         static void Main(string[] args)
         {
+
             while (true)
             {
+                bool isAuthorised=CheckCredentials();
+                if (!isAuthorised)
+                {
+                    Console.WriteLine("Access denied.");
+                    Console.ReadKey(intercept:true);
+                    return;
+                }
+
                 Console.Clear();
                 Console.WriteLine("Console Calculator App");
                 Console.WriteLine(new string('-', 15));
@@ -40,8 +59,15 @@
                             break;
                         case "m":
                            OptionsManager.Multiply(a, b);
+                            break;               
+                        case "d":
+                            OptionsManager.Divide(a, b);
+                            break;
+                        case "sabs":
+                            OptionsManager.SubstractAbs(a,b);
                             break;
                     }
+
                 }
                 catch (InvalidOperationException ex)
                 {
