@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿ namespace Calculator
 {
     internal class StartUp
     {
@@ -36,10 +36,19 @@
                             OptionsManager.Add(a, b);
                             break;
                         case "s":
-                           OptionsManager.Subtract(a, b);
+                            OptionsManager.Subtract(a, b);
                             break;
                         case "m":
-                           OptionsManager.Multiply(a, b);
+                            OptionsManager.Multiply(a, b);
+                            break;
+                        case "pow":
+                            OptionsManager.Power(a, b);
+                            break;
+                        case "log":
+                            OptionsManager.Log(a, b);
+                            break;
+                        case "fact":
+                            OptionsManager.Factorial(a, b);
                             break;
                     }
                 }
