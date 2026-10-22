@@ -74,6 +74,9 @@
                             Console.WriteLine("Goodbye");
                             Console.ReadKey(true);
                             return;
+			            case "min":
+			                OptionsManager.Minimum(a, b);
+			                break;
                     }
 
                 }

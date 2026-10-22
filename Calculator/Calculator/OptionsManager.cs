@@ -15,7 +15,8 @@ namespace Calculator
             "m - Multiply",
             "d - Divide",
             "sabs - Substract Abs",
-            "dr - Divide Remainder"
+            "dr - Divide Remainder",
+            "min - Minimum",
              };
 
         public static void Add(double a, double b)
@@ -46,5 +47,11 @@ namespace Calculator
         {
             Console.WriteLine( $"{a} % {b} = {a % b}");
         }
+		
+	public static void Minimum(double a, double b)
+    {
+        double min = (a < b) ? a : b;
+	    Console.WriteLine(min);
+	}
     }
 }
